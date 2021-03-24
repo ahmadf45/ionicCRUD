@@ -7,11 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-item>
+    <ion-label>Nama</ion-label>
+    <ion-input (ionChange)="getNama($event)" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>No Hp</ion-label>
+    <ion-input type="number" (ionChange)="getNo_hp($event)" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input (ionChange)="getEmail($event)" required></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="save()">Block Button</ion-button>
 </ion-content>
